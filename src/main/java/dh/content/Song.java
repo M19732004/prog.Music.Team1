@@ -2,9 +2,10 @@ package dh.content;
 
 import dh.user.Artist;
 
+import java.sql.SQLOutput;
 import java.util.Date;
 
-public class Song {
+public class Song implements Content{
     private String idSong;
     private String title;
     private float length;
@@ -12,13 +13,8 @@ public class Song {
     private Artist artistOfSong;
     private Album albumOfSong;
 
-    public Song(String idSong, String title, float length, Date publicationDate, Artist artistOfSong, Album albumOfSong) {
-        this.idSong = idSong;
-        this.title = title;
-        this.length = length;
-        this.publicationDate = publicationDate;
-        this.artistOfSong = artistOfSong;
-        this.albumOfSong = albumOfSong;
+    public Song(){
+
     }
 
     public String getIdSong() {
@@ -67,5 +63,9 @@ public class Song {
 
     public void setAlbumOfSong(Album albumOfSong) {
         this.albumOfSong = albumOfSong;
+    }
+
+    protected static void playSong(Song song) {
+        System.out.println("we");
     }
 }

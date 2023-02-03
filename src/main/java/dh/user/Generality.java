@@ -9,12 +9,7 @@ public class Generality {
     private String residence;
     private String genre;
 
-    public Generality(String name, String surname, Date dateOfBirth, String residence, String genre) {
-        this.name = name;
-        this.surname = surname;
-        this.dateOfBirth = dateOfBirth;
-        this.residence = residence;
-        this.genre = genre;
+    public Generality() {
     }
 
     public String getName() {

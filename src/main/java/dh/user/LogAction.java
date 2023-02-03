@@ -9,11 +9,7 @@ public class LogAction {
     private User admin;
     private String details;
 
-    public LogAction(String action, Date date_action, User admin, String details) {
-        this.action = action;
-        this.date_action = date_action;
-        this.admin = admin;
-        this.details = details;
+    public LogAction() {
     }
 
     public String getAction() {

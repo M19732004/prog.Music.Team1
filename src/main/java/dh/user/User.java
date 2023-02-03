@@ -20,6 +20,11 @@ public class User {
         this.generality = generality;
     }
 
+
+    public User() {
+
+    }
+
     public String getUsername() {
         return username;
     }

@@ -1,5 +1,8 @@
 package dh.user;
 
+import dh.content.Album;
+import dh.content.Song;
+
 import java.util.Date;
 import java.util.List;
 
@@ -7,15 +10,12 @@ public class Artist extends User {
 
     private String name;
     private String bio;
-    private List<String> album;
-    private List<String> songs;
+    private List<Album> albumOfArtist;
+    private List<Song> songOfArtist;
 
-    public Artist(String username, String password, String email, Date creation_date, boolean loggedIn, Generality generality, String name, String bio, List<String> album, List<String> songs) {
-        super(username, password, email, creation_date, loggedIn, generality);
-        this.name = name;
-        this.bio = bio;
-        this.album = album;
-        this.songs = songs;
+    public Artist() {
+        super();
+
     }
 
     public String getName() {
@@ -34,19 +34,19 @@ public class Artist extends User {
         this.bio = bio;
     }
 
-    public List<String> getAlbum() {
-        return album;
+    public List<Album> getAlbumOfArtist() {
+        return albumOfArtist;
     }
 
-    public void setAlbum(List<String> album) {
-        this.album = album;
+    public void setAlbumOfArtist(List<Album> albumOfArtist) {
+        this.albumOfArtist = albumOfArtist;
     }
 
-    public List<String> getSongs() {
-        return songs;
+    public List<Song> getSongOfArtist() {
+        return songOfArtist;
     }
 
-    public void setSongs(List<String> songs) {
-        this.songs = songs;
+    public void setSongOfArtist(List<Song> songOfArtist) {
+        this.songOfArtist = songOfArtist;
     }
 }

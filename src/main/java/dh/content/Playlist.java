@@ -5,19 +5,15 @@ import dh.user.User;
 import java.util.Date;
 import java.util.List;
 
-public class Playlist {
+public class Playlist implements Content{
     private String idPlaylist;
     private String title;
     private User creator;
     private List<Song> songsOfAlbum;
     private Date publicationDate;
 
-    public Playlist(String idPlaylist, String title, User creator, List<Song> songsOfAlbum, Date publicationDate) {
-        this.idPlaylist = idPlaylist;
-        this.title = title;
-        this.creator = creator;
-        this.songsOfAlbum = songsOfAlbum;
-        this.publicationDate = publicationDate;
+    public Playlist() {
+
     }
 
     public String getIdPlaylist() {
@@ -58,5 +54,9 @@ public class Playlist {
 
     public void setPublicationDate(Date publicationDate) {
         this.publicationDate = publicationDate;
+    }
+
+    protected static void playPlaylist(Playlist playlist) {
+
     }
 }

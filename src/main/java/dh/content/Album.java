@@ -5,13 +5,16 @@ import dh.user.Artist;
 import java.util.Date;
 import java.util.List;
 
-public class Album {
+public class Album implements Content{
     private String idAlbum;
     private String title;
     private Artist artist;
     private List<Song> songsOfAlbum;
     private Date publicationDate;
 
+    public Album(){
+
+    }
     public String getIdAlbum() {
         return idAlbum;
     }
@@ -50,5 +53,10 @@ public class Album {
 
     public void setPublicationDate(Date publicationDate) {
         this.publicationDate = publicationDate;
+    }
+
+    protected static void playAlbum(Album album) {
+
+        System.out.println("ciao");
     }
 }
